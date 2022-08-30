@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>changevariable </title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad207ff326.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Update css variable with <span>js</span></h1>
@@ -15,19 +16,31 @@
     
         <label for="blur">blur</label>
         <input type="range"  name="blur"  min="1" max="20" value="10" data-spacig="px">
-        <input type="color" name="base" value="#ffc600" id="">
-       
+        <div class="cont">
+           
+                <input type="color" name="base" value="#ffc600" id="1">
+                <label for="1"><i class="fa-solid fa-up-from-line"></i></label>
+                <input type="file" name="img" id="1" onchange="loadfile(event) "  accept="image/*" >
+        </div>
     </div>
-    <img src="drum.jpg" alt="">
+    <img src="drum.jpg" id="sat">
 </body>
 <script>
     const inputs=document.querySelectorAll('.controls input');
+
+    const sat=document.getElementById("sat");
     function handleupdate()
     {
+        console.log(this.value)
         const suffix=this.dataset.spacig || ''; 
         document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
     }
     inputs.forEach(input => input.addEventListener('change',handleupdate));
     inputs.forEach(input => input.addEventListener('mousemove',handleupdate));
+    var loadfile= function(event)
+    {
+        // img.style.backgroundImage="url("+ URL.createObjectURL(event.target.files[0]) +")";
+        sat.src=URL.createObjectURL(event.target.files[0]);
+    }
 </script>
 </html>

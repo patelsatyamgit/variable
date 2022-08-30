@@ -18,12 +18,12 @@ body
     margin-bottom: 50px;
 
 }
-.controls input[name="color"]
+.cont{
+    margin-top: 20px;
+}
+.cont input
 {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 110px;
+    margin-right: 20px;
 }
 h1{
     font-size: 40px;
@@ -35,10 +35,12 @@ span
 }
 img
 {
-    width: 800px;
+    max-width: 800px;
     border-radius: 10px;
     border-color: var(--base);
     background: var(--base);
     padding: var(--spacing);
     filter: blur(var(--blur));
+    position: absolute;
+    left: 400px;
 }
