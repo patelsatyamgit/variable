@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins" sans-serif;
+}
+:root{
+    --base:#ffc600;
+    --spacing:1px;
+    --blur:1px;
+}
+body
+{
+    text-align: center;
+    background-color: rgb(97, 97, 137);
+}
+.controls{
+    margin-bottom: 50px;
+
+}
+.controls input[name="color"]
+{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 110px;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+span
+{
+    color: var(--base);
+}
+img
+{
+    width: 800px;
+    border-radius: 10px;
+    border-color: var(--base);
+    background: var(--base);
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+}
